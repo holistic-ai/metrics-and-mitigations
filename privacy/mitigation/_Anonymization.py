@@ -85,18 +85,18 @@ class Anonymize:
         self
         """
         if k < 2:
-                raise ValueError("k should be a positive integer with a value of 2 or higher")
-            if quasi_identifiers is None or len(quasi_identifiers) < 1:
-                raise ValueError("The list of quasi-identifiers cannot be empty")
+            raise ValueError("k should be a positive integer with a value of 2 or higher")
+        if quasi_identifiers is None or len(quasi_identifiers) < 1:
+            raise ValueError("The list of quasi-identifiers cannot be empty")
 
-            self.k = k
-            self.quasi_identifiers = quasi_identifiers
-            self.categorical_features = categorical_features
-            self.is_regression = is_regression
-            self.train_only_QI = train_only_QI
-            self.features_names = features_names
-            self.features = features
-            self.quasi_identifer_slices = quasi_identifer_slices
+        self.k = k
+        self.quasi_identifiers = quasi_identifiers
+        self.categorical_features = categorical_features
+        self.is_regression = is_regression
+        self.train_only_QI = train_only_QI
+        self.features_names = features_names
+        self.features = features
+        self.quasi_identifer_slices = quasi_identifer_slices
 
     def anonymize(self, X_train, y_train):
         """
